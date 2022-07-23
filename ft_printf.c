@@ -6,11 +6,15 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:32:52 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/23 15:34:58 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/07/23 16:13:49 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "ft_printf.h"
+
+int	ft_printf(const *src, ...)
+{
+	
+}
 
 

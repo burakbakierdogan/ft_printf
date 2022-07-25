@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:43:31 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/23 15:46:59 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/07/25 14:17:02 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <stdio.h>
 
-int	ft_printf(cost char *src, ...);
+int	ft_printf(const char *src, ...);
 
 
 

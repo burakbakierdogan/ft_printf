@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 15:43:31 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/26 06:03:29 by berdogan         ###   ########.fr       */
+/*   Created: 2022/07/26 05:38:57 by berdogan          #+#    #+#             */
+/*   Updated: 2022/07/26 05:40:07 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-
-#include <unistd.h>
-#include <stdarg.h>
-#include <stdlib.h>
-#include <limits.h>
-#include <stdio.h>
-
-int	ft_printf(const char *src, ...);
-int	ft_putchar(int c);
-int	ft_itoa_base(unsigned int nbr, int base, char format);
-int	ft_putstr(char *str);
-
-
-
-#endif
+#include "ft_printf"
+int	ft_putchar(int c)
+{
+	if (!c)
+		return (0);
+	write(1, &c, 1);
+	return (1);
+}

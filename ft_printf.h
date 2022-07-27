@@ -6,11 +6,11 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:43:31 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/28 01:19:59 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/07/28 01:20:32 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
+# ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
 #include <unistd.h>
@@ -21,4 +21,4 @@
 
 int	ft_printf(const char *src, ...);
 int	ft_itoa_base(unsigned int nbr, int base, char format);
-#endif
+# endif

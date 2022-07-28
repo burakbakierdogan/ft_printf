@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:32:52 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/28 04:40:33 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/07/28 14:01:36 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,16 @@ static	int	ft_putstr(char const *str)
 	return (index);
 }
 
+int	ft_adress(va_list list)
+{
+	int	ret;
+
+	ret = 2;
+	write(1, "0x", 2);
+	ret += ft_itoa_base(((unsigned long int) va_arg(list, void *)), 16, 'x');
+	return (ret);
+}
+
 static	int	ft_write(char const *src, va_list list)
 {
 	int	ret;
@@ -41,13 +51,9 @@ static	int	ft_write(char const *src, va_list list)
 	else if (src[1] == 'd')
 		ret = ft_putstr(ft_itoa(va_arg(list, int)));
 	else if (src[1] == 's')
-		ret = ft_putstr(va_arg(list, char*));
+		ret = ft_putstr(va_arg(list, char *));
 	else if (src[1] == 'p')
-	{
-		ret = 2;
-		write(1, "0x", 2);
-		ret += ft_itoa_base((unsigned long int) va_arg(list, void*), 16, 'x');
-	}
+		ret = ft_adress(list);
 	else if (src[1] == 'i')
 		ret = ft_itoa_base(va_arg(list, unsigned int), 10, 'x');
 	else if (src[1] == 'u')
@@ -66,9 +72,11 @@ int	ft_printf(const char *src, ...)
 	int		index;
 	int		ret;
 	va_list	list;
+	int		total;
 
 	index = 0;
 	ret = 0;
+	total = 0;
 	va_start(list, src);
 	while (src[index])
 	{
@@ -78,8 +86,11 @@ int	ft_printf(const char *src, ...)
 			index++;
 		}
 		else
+		{
 			write (1, &src[index++], 1);
+			total++;
+		}
 	}
 	va_end(list);
-	return (index + ret);
+	return (total + ret);
 }

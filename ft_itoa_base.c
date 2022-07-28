@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 02:39:11 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/28 03:25:39 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/07/28 14:35:29 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static	int	ft_len(unsigned long int nbr, int base)
 	return (index);
 }
 
-static	void	ft_write(char *str, int len)
+static	int	ft_write(char *str, int len)
 {
 	int	index;
 
@@ -35,6 +35,7 @@ static	void	ft_write(char *str, int len)
 	while (index <= len)
 		write (1, &str[index++], 1);
 	free (str);
+	return (len);
 }
 
 int	ft_itoa_base(unsigned long int nbr, int base, char format)
@@ -63,7 +64,5 @@ int	ft_itoa_base(unsigned long int nbr, int base, char format)
 		len--;
 		nbr /= base;
 	}
-	ft_write(str, ret);
-	return (ret);
+	return (ft_write(str, ret));
 }
-

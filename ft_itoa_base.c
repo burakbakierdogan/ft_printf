@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 02:39:11 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/28 14:35:29 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/07/28 15:39:54 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static	int	ft_write(char *str, int len)
 	return (len);
 }
 
-int	ft_itoa_base(unsigned long int nbr, int base, char format)
+int	ft_itoa_base(unsigned long long int nbr, int base, char format)
 {
 	int		len;
 	char	*str;

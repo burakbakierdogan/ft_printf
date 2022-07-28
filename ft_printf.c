@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:32:52 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/28 03:30:06 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/07/28 04:40:33 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ static	int	ft_write(char const *src, va_list list)
 		ret = ft_putstr(va_arg(list, char*));
 	else if (src[1] == 'p')
 	{
-		void *ptr;
-		ptr = (va_arg(list, void*));
-		ret = ft_itoa_base((unsigned long int) &ptr, 16, 'X');
+		ret = 2;
+		write(1, "0x", 2);
+		ret += ft_itoa_base((unsigned long int) va_arg(list, void*), 16, 'x');
 	}
 	else if (src[1] == 'i')
 		ret = ft_itoa_base(va_arg(list, unsigned int), 10, 'x');

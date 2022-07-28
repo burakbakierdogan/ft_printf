@@ -6,7 +6,7 @@
 #    By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/28 02:24:58 by berdogan          #+#    #+#              #
-#    Updated: 2022/07/28 03:00:47 by berdogan         ###   ########.fr        #
+#    Updated: 2022/07/28 03:32:47 by berdogan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ $(NAME): libft
 libft: $(SRCS)
 	make -C ./libft
 clean:
-	rm -rf */**.o
+	rm -rf *.o */**.o
 fclean: clean
-	rm -rf */**.a
+	rm -rf *.a */**.a
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:43:31 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/28 01:20:32 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/07/28 03:26:02 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@
 #include <stdio.h>
 
 int	ft_printf(const char *src, ...);
-int	ft_itoa_base(unsigned int nbr, int base, char format);
+int	ft_itoa_base(unsigned long int nbr, int base, char format);
 # endif

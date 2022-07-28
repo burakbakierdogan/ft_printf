@@ -6,13 +6,13 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 02:39:11 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/26 05:38:23 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/07/28 03:25:39 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	int	ft_len(unsigned int nbr, int base)
+static	int	ft_len(unsigned long int nbr, int base)
 {
 	int	index;
 
@@ -37,7 +37,7 @@ static	void	ft_write(char *str, int len)
 	free (str);
 }
 
-int	ft_itoa_base(unsigned int nbr, int base, char format)
+int	ft_itoa_base(unsigned long int nbr, int base, char format)
 {
 	int		len;
 	char	*str;

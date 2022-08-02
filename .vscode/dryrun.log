@@ -1,8 +1,0 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory `/Users/berdogan/Desktop/ft_printf'
-make -C libft
-gcc -Wall -Werror -Wextra -c -I libft ft_printf.c ft_itoa_base.c
- 
-ar -rcs libftprintf.a ft_printf.o ft_itoa_base.o ./libft/ft_itoa.o ./libft/ft_strlen.o ./libft/ft_memset.o ./libft/ft_bzero.o ./libft/ft_strlcpy.o ./libft/ft_calloc.o
-make: Leaving directory `/Users/berdogan/Desktop/ft_printf'
- 

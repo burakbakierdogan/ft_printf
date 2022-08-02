@@ -6,25 +6,25 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 02:39:11 by berdogan          #+#    #+#             */
-/*   Updated: 2022/07/28 15:39:54 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/08/02 18:35:03 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	int	ft_len(unsigned long int nbr, int base)
+static	int	ft_len(unsigned long long int nbr, int base)
 {
 	int	index;
 
 	index = 0;
 	if (nbr == 0)
-		return (1);
+		return (0);
 	while (nbr)
 	{
 		nbr /= base;
 		index++;
 	}
-	return (index);
+	return (index - 1);
 }
 
 static	int	ft_write(char *str, int len)
@@ -35,7 +35,7 @@ static	int	ft_write(char *str, int len)
 	while (index <= len)
 		write (1, &str[index++], 1);
 	free (str);
-	return (len);
+	return (len + 1);
 }
 
 int	ft_itoa_base(unsigned long long int nbr, int base, char format)
@@ -51,7 +51,7 @@ int	ft_itoa_base(unsigned long long int nbr, int base, char format)
 		write (1, "0", 1);
 		return (1);
 	}
-	str = (char *) malloc ((len) * sizeof(char));
+	str = (char *) malloc (((len) + 20) * sizeof(char));
 	if (!str)
 		return (0);
 	while (len >= 0 && nbr)

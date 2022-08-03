@@ -6,7 +6,7 @@
 /*   By: berdogan <berdogan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 15:32:52 by berdogan          #+#    #+#             */
-/*   Updated: 2022/08/02 19:53:40 by berdogan         ###   ########.fr       */
+/*   Updated: 2022/08/03 16:04:01 by berdogan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ static	int	ft_adress(va_list list)
 	nbr = va_arg(list, long long);
 	if (!nbr)
 	{
-		write (1, "(nil)", 5);
-		return (5);
+		write (1, "0x0", 3);
+		return (3);
 	}
 	ret = 2;
 	write(1, "0x", 2);
